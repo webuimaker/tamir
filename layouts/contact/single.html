@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+   {{ partial "topmenu.html" . }}
+  <main class="flex container">
+
+   
+    <div class="book-page ">
+		
+	
+	
+      <form method="POST" action="https://formspree.io/webuimaker@gmail.com">
+		<div class="form-row">
+		  <input type="email" name="email" placeholder="Your email"> 
+		</div>
+		<div class="form-row">
+		  <input type="tel" name="tel" placeholder="Your contact number">
+		 </div>
+		 <div class="form-row">
+		  <textarea rows="5" name="message" placeholder="Test Message"></textarea>
+		  </div>
+		  <div class="form-row">
+
+		  <button type="submit">Send Test</button>
+		  </div>
+		</form>
+    </div>
+  </main>
+
+  {{ partial "docs/inject/body" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+</body>
+
+</html>
